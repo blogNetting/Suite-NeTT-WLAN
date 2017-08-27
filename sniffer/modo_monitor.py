@@ -16,22 +16,26 @@ from subprocess import call
 from platform import system
 
 
+
 def existe_interfaz(interfaz):
-	return (os.path.isdir("/sys/class/net/" + interfaz))
-		
-		
+	return (os.path.isdir("/sys/class/net/" + interfaz))		
+
+
 def is_root():
 	if (os.geteuid() != 0):
 		print("\n[!] Debes de ejcutar el script como root.\n")
 		exit(1)
 
+		
 def OS_check():
     if (system() != "Linux"):
 		print "\n[!] La herramienta solo es compatible con GNU/Linux.\n"
 		exit(1)
 
+		
 def esta_modo_monitor(inter_monitor):
 	return (os.path.isdir("/sys/class/net/" + inter_monitor))
+
 
 def estado():
 	lista_fichs = glob.glob("/sys/class/net/mon*")
@@ -41,10 +45,9 @@ def estado():
 	else:
 		for fich in lista_fichs:
 			lista.append(os.path.basename(fich))
-		
 	print "\n\tInterfaces en modo monitor: " + ", ".join(lista) + ".\n"
 
-
+	
 def monitor(interfaz):
 	inter_monitor = "mon0"
 	if not (esta_modo_monitor(inter_monitor)):
@@ -64,6 +67,7 @@ def monitor(interfaz):
 	else:
 		print "\n[!] Ya existe una interfaz mon0 en modo MONITOR.\n"
 	
+	
 def stop(interfaz):
 	if (esta_modo_monitor(interfaz)):
 		os.system("iw dev " + interfaz + " del")
@@ -71,6 +75,7 @@ def stop(interfaz):
 	else:
 		print "\n[!]No existe la interfaz " + interfaz + ".\n"
 
+		
 def uso():
 	print "\n\tSuite NeTT-WLAN: modo_monitor.py\n" 
 	print "\tCreative commons (cc) - creativecommons.org"
