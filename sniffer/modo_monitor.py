@@ -5,6 +5,8 @@
 # Web:			blog.netting.es
 # email:		netting(at)netting(dot)es
 
+# Suite NeTT-WLAN: modo_monitor.py\
+
 # Licencia: 
 # Creative commons (cc) - creativecommons.org
 # Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
@@ -70,7 +72,7 @@ def stop(interfaz):
 		print "\n[!]No existe la interfaz " + interfaz + ".\n"
 
 def uso():
-	print "\n\tSuite NeTT-WLAN: mode_monitor.py\n" 
+	print "\n\tSuite NeTT-WLAN: modo_monitor.py\n" 
 	print "\tCreative commons (cc) - creativecommons.org"
 	print "\tAttribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)\n\n"
 	
