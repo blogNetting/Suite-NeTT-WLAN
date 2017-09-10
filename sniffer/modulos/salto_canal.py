@@ -201,12 +201,7 @@ class SaltoCanal(Thread):
 ########################################################################
 		
 if __name__ == '__main__':
-	a = SaltoCanal("wlan1", check = True)
-	#a = SaltoCanal("wlan1", check = True, _24Ghz=True, _5Ghz=True)
+	#a = SaltoCanal("wlan1", check = True)
 	#a.start()
-	#a.start()
-		
-	a.start()
-	raw_input('Press enter to stop...')
-	a.lista_VIC([10, 12], espera=10)
-	raw_input('Press enter to stop...')
+	#raw_input('Press enter to stop...')
+	
