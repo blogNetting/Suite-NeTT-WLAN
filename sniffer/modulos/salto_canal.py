@@ -12,7 +12,6 @@
 import threading, os, sys
 from threading import Thread
 
-#from manejo_interfaz.manejo_interfaz import existe_interfaz, esta_modo_monitor
 from manejo_interfaz import existe_interfaz, esta_modo_monitor
 
 from subprocess import Popen, PIPE
