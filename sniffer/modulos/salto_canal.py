@@ -135,7 +135,7 @@ class SaltoCanal(Thread):
 					# Asignamos el canal actual.
 					if not (self.__cambiar_canal(canal)):
 						self.canal_actual = canal
-					print "Run: " + Thread.getName(self) + " Canal: " + str(self.canal_actual)
+					#print "Run: " + Thread.getName(self) + " Canal: " + str(self.canal_actual)
 					if (canal in self.__lista_VIC):
 						sleep(self.__espera_VIC)
 					else:
