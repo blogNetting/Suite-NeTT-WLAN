@@ -35,13 +35,14 @@ class SaltoCanal(Thread):
 		self.verbose = verbose
 		# Comprobamos que se pasa al menos una lista de canales.
 		self.__lista_canales_valida(_24Ghz, _5Ghz)
+		# Comprobamos que la interfaz existe.
+		self.interfaz = self.__comprobar_interfaz(interfaz)
 		# Iniciamos el hilo.
 		Thread.__init__(self)
 		# Hilo de tipo 'daemon'. El hilo principal puede terminar sin esperar por los demás.
 		Thread.daemon = True
 		
 		# Inicializamos variables locales.
-		self.interfaz = self.__comprobar_interfaz(interfaz)
 		# Dividimos entre 10.0 y casteanos a float
 		self.__espera = float(espera/10.0)
 		self.__pausar=False
