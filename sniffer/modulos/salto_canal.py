@@ -202,5 +202,5 @@ class SaltoCanal(Thread):
 if __name__ == '__main__':
 	#a = SaltoCanal("wlan1", check = True)
 	#a.start()
-	#raw_input('Press enter to stop...')
+	#raw_input('Presiona enter para finalizar...')
 	
